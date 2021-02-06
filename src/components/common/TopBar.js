@@ -13,7 +13,7 @@ const TopBar = () => {
     return(
         <Link to = "/">
             <TopBarBlock>
-            <img src={logo} width='150' alt="logo"/>
+            <img src={logo} width='160' alt="logo"/>
             </TopBarBlock>
         </Link>
     );
