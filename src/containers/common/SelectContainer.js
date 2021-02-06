@@ -3,21 +3,9 @@ import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Select from '../../components/common/Select';
-import styled from 'styled-components';
 import { changeSI, changeSIDO } from '../../modules/admin_district';
 import { changeCategory } from '../../modules/category';
 import Button from '../../components/common/Button';
-
-const SelectBlock = styled.div`
-    width: 100%;
-    height: 500px;
-`;
-
-const FormBlock = styled.form`
-    margin-left: 300px;
-    margin-top: 100px;
-`
-
 
 const SelectContainer = () => {
     const [districts, setDistricts] = useState([]);
@@ -53,14 +41,12 @@ const SelectContainer = () => {
     }, []);
 
     return (
-        <SelectBlock>
-            <FormBlock>
-                <Select list={SiList} name="시도명" Change={onChangeSI}/>
-                <Select list={SiDoList} name="시군구명" Change={onChangeSIDO}/>
-                <Select list={CategoryList} name="카테고리" Change={onChangeCategory}/>
-                <Link to="/search"><Button/></Link>
-            </FormBlock>
-        </SelectBlock>
+        <form>
+            <Select list={SiList} name="시도명" Change={onChangeSI}/>
+            <Select list={SiDoList} name="시군구명" Change={onChangeSIDO}/>
+            <Select list={CategoryList} name="카테고리" Change={onChangeCategory}/>                
+            <Link to="/search"><Button/></Link>
+        </form>
     );
 };
 

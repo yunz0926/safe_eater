@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import logo from './logo.png';
+import { Link } from 'react-router-dom';
 
 const TopBarBlock = styled.div`
     margin-left: 30px;
@@ -10,9 +11,11 @@ const TopBarBlock = styled.div`
 
 const TopBar = () => {
     return(
-        <TopBarBlock>
-        <img src={logo} width='150' alt="logo"/>
-        </TopBarBlock>
+        <Link to = "/">
+            <TopBarBlock>
+            <img src={logo} width='150' alt="logo"/>
+            </TopBarBlock>
+        </Link>
     );
 };
 

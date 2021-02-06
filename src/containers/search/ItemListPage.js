@@ -1,49 +1,30 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import axios from 'axios';
 import ItemList from '../../components/search/ItemList';
+import Pagination from '../../components/search/Pagination';
 
 const ItemListPage = () => {
-    const {si, sido, category} = useSelector(({admin_district, category}) => ({
-        si: admin_district.si,
-        sido: admin_district.sido,
-        category: category.category,
+    const [currentPage, setCurrentPage] = useState(1);
+    const [itemsPerPage, setItemsPerPage] = useState(10);
+    const {searchedData} = useSelector(({data}) => ({
+        searchedData: data.searchedData,
     }));
 
-    const [datalist, setDatalist] = useState([]);
-    const [searchedData, setSearchedData] = useState([]);
+    const indexOfLast = currentPage * itemsPerPage;
+    const indexOfFirst = indexOfLast - itemsPerPage;
 
-    const loadData = async () => {
-        axios
-            .get("./safe_restaurant.json")
-            .then(({data}) => {
-                setDatalist(data.data);
-                if(category !== "전체") {
-                    setSearchedData(datalist.filter(e =>
-                        (e["RELAX_SI_NM"] === si &&
-                        e["RELAX_SIDO_NM"] === sido &&
-                        e["RELAX_GUBUN_DETAIL"] === category))
-                    );
-                }
-                else{
-                    setSearchedData(datalist.filter(e =>
-                        (e["RELAX_SI_NM"] === si &&
-                        e["RELAX_SIDO_NM"] === sido &&
-                        e["RELAX_GUBUN_DETAIL"] === category))
-                    );
-                }
-            })
-            .catch(e => {
-                console.log(e);
-            });
-    };
+    const currentItems = data => {
+        let currentItems = 0;
+        currentItems = data.slice(indexOfFirst, indexOfLast);
 
-    useEffect(() => {
-        loadData();
-    }, []);
-
+        return currentItems;
+    }
     return (
-        <ItemList data={searchedData}/>
+        <div>
+            <ItemList data={currentItems(searchedData)}/>
+            <Pagination itemsPerPage={itemsPerPage} totalItems={searchedData.length} paginate={setCurrentPage} />
+        </div>
+
     );
 };
 

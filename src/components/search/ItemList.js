@@ -4,7 +4,8 @@ import styled from 'styled-components';
 
 const ItemListBlock = styled.div`
     width: 100%;
-    height: 100px;
+    text-align: center;
+    display: block;
 `
 
 const ItemList = ({data}) => {
@@ -15,6 +16,7 @@ const ItemList = ({data}) => {
                       category={item.RELAX_GUBUN_DETAIL}
                       addr={item.RELAX_ADD1}
                       telephone={item.RELAX_RSTRNT_TEL} /> ))}
+            {data===[] && <div>검색결과가 없습니다.</div>}
         </ItemListBlock>
     );
 };
