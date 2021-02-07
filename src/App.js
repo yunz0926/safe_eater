@@ -4,14 +4,15 @@ import Main from './pages/Main';
 import Search from './pages/Search';
 import './App.css';
 import GlobalFonts from './fonts/fonts';
+import ScrollToTop from './containers/common/ScrollToTop';
 
 const App = () => {
   return (
-    <div>
+    <ScrollToTop>
       <GlobalFonts />
       <Route component={Main} path="/" exact />
       <Route component={Search} path="/search/:ccd_code?" />
-    </div>
+    </ScrollToTop>
   )
 }
 
