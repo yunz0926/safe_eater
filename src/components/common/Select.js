@@ -12,7 +12,6 @@ const StyledSelect = styled.select`
     color: #686d76;
     font-family: '고양일산';
     text-align-last: center;
-    /*background: url('arrow1.png') no-repeat 90% 50%;*/
 
     option {
         align-items: center;
@@ -35,7 +34,7 @@ const Select = ({list, name, Change}) => {
     }
     return (
         <StyledSelect name={name} value={value} onChange={onChange}>
-            <option key="undefined" selected disable hidden>==={name}===</option>
+            <option key="undefined" value="default" disable="true" hidden>==={name}===</option>
             {list && list.map((t, index) => (
                 <option key={index}>{t}</option> 
             ))}

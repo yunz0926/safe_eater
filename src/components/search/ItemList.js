@@ -11,12 +11,13 @@ const ItemListBlock = styled.div`
 const ItemList = ({data}) => {
     return (
         <ItemListBlock>
-            {data && data.map(item => (
-                <Item name={item.RELAX_RSTRNT_NM}
+            {data===[] && <div>검색결과가 없습니다.</div>}
+            {data && data.map((item, index) => (
+                <Item key={index}
+                      name={item.RELAX_RSTRNT_NM}
                       category={item.RELAX_GUBUN_DETAIL}
                       addr={item.RELAX_ADD1}
                       telephone={item.RELAX_RSTRNT_TEL} /> ))}
-            {data===[] && <div>검색결과가 없습니다.</div>}
         </ItemListBlock>
     );
 };

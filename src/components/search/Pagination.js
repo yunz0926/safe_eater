@@ -47,7 +47,8 @@ const Pagination = ({itemsPerPage, totalItems, paginate}) => {
         <PageBlock>
             {pageNumbers.map(number => (
                 <PageLi key={number}>
-                    <PageSpan onClick={() => paginate(number)}>
+                    <PageSpan onClick={() => {paginate(number);
+                                              window.scrollTo(0, 0);}}>
                         {number}
                     </PageSpan>
                 </PageLi> 
