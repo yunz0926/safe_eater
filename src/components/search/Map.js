@@ -1,46 +1,34 @@
 import React, { useEffect } from 'react';
 
-const Map = ({searchPlace}) => {
+const Map = ({searchPlace, address}) => {
     const { kakao } = window;
 
     useEffect(() => {
-        const infowindow = new kakao.maps.InfoWindow({zIndex: 1});
         const mapContainer = document.getElementById(searchPlace);
         const mapOption = {
             center: new kakao.maps.LatLng(37.566826, 126.9786567), 
-            level: 10, 
+            level: 3, 
         };
 
         const map = new kakao.maps.Map(mapContainer, mapOption);
-        const ps = new kakao.maps.services.Places();
+        const geocoder = new kakao.maps.services.Geocoder();
 
-        ps.keywordSearch(searchPlace, placesSearchCB);
+        geocoder.addressSearch(address, function(result, status) {
+            if(status === kakao.maps.services.Status.OK) {
+                const coords = new kakao.maps.LatLng(result[0].y, result[0].x);
 
-        function placesSearchCB (data, status, pagination) {
-            if (status === kakao.maps.services.Status.OK) {
-                const bounds = new kakao.maps.LatLngBounds();
+                const marker = new kakao.maps.Marker({
+                    map: map,
+                    position: coords
+                });
 
-                for (let i = 0; i < data.length; i++) {
-                    displayMarker(data[i]);
-                    bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x));
-                }
-                map.setBounds(bounds);
+                kakao.maps.event.addListener(marker);
+
+                map.setCenter(coords);
             }
-        };
+        })
 
-        function displayMarker (place) {
-            const marker = new kakao.maps.Marker({
-                map: map,
-                position: new kakao.maps.LatLng(place.y, place.x)
-            });
-
-            kakao.maps.event.addListener(marker, 'click', () => {
-                infowindow.setContent('<div style="padding:5px; font-size:12px;">' + place.place_name + '</div>');
-                infowindow.open(map, marker);
-            });
-        };
-
-    }, [searchPlace, kakao.maps]);
+    }, [searchPlace, address, kakao.maps]);
 
     return (
         <div id={searchPlace} style={{ width: '280px', height: '280px'}} />

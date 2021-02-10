@@ -1,49 +1,48 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import TopBar from '../components/common/TopBar';
 import Banner from '../components/main/Banner';
-import SelectContainer from '../containers/common/SelectContainer';
-import NearbySearch from '../components/main/NearbySearch';
 import styled from 'styled-components';
 
 const MenuBlock = styled.div`
     display: inline-block;
-    color: #393e46;
+    width: 250px;
+    height: 250px;
+    margin-top: 150px;
+    margin-left: 250px;
+    margin-bottom: 100px;
     font-size: 20px;
-    font-family: 'NanumBarunGothic';
-    padding-bottom: 3px;
-    border-bottom: 5px solid #6BA688;
-    margin-left: 200px;
-    margin-top: 130px;
-    margin-bottom: 60px;
-`;
-const SelectBlock = styled.div`
-    width: 100%;
-    height: 100px;
-    margin-left: 300px;
+    font-family: '고양일산';
+    color: black;
+    text-align: center;
+    border: 1px solid #cdd0cb;
+    border-radius: 250px;
+
+    &:hover{
+      background-color: #c7cfb7;
+      color: white;
+    }
 `;
 
-const MapBlock = styled.div`
-  width: 100%;
-  margin-left: 350px;
-  margin-bottom: 100px;
-`
 const Home = () => {
     return (
         <div>  
           <TopBar />
           <Banner />
-          <MenuBlock>
-            지역별, 카테고리별로 검색하기
-          </MenuBlock>
-          <SelectBlock>
-            <SelectContainer/>
-          </SelectBlock>
-          <MenuBlock>
-              주변에서 검색하기
-          </MenuBlock>
-          <MapBlock>
-            <NearbySearch/>
-          </MapBlock>
+          <Link to="/selectsearch">
+            <MenuBlock>
+              <div style={{padding: '100px 0'}}>
+                지역별, 카테고리별로<br/>검색하기
+              </div>
+            </MenuBlock>
+          </Link>
+          <Link to="/nearbysearch">
+            <MenuBlock>
+              <div style={{padding: '100px 0'}}>
+                주변에서 <br/> 검색하기
+              </div>
+            </MenuBlock>
+          </Link>
         </div>
     );
 };

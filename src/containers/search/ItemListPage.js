@@ -32,10 +32,6 @@ const ItemListPage = () => {
     }
     return (
         <div>
-            <Notice>
-                [주소 + 사업장명] 으로 검색한 위치정보를 지도 상에 보여줍니다.
-                검색 결과가 없거나, 부정확할 수 있습니다.
-            </Notice>
             <ItemList data={currentItems(searchedData)}/>
             <Pagination itemsPerPage={itemsPerPage} totalItems={searchedData.length} paginate={setCurrentPage} />
         </div>

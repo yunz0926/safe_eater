@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 
-const NearbySearch = () => {
+const NearbyMap = () => {
     const { kakao, navigator } = window;
 
-    useEffect(() => {
+    useEffect( () => {
         const infowindow = new kakao.maps.InfoWindow({zindex: 1});
         const mapContainer = document.getElementById('nearby');
 
@@ -71,9 +71,10 @@ const NearbySearch = () => {
             });
         }       
     },[kakao.maps, navigator.geolocation])
+
     return (
-        <div id='nearby' style={{ width: '600px', height: '600px'}} />
+    <div id='nearby' style={{ width: '600px', height: '600px'}}/>
     );
 };
 
-export default NearbySearch;
+export default NearbyMap;

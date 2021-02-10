@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 const ItemListBlock = styled.div`
     width: 100%;
+    font-size: 17px;
     text-align: center;
     display: block;
 `
@@ -11,7 +12,7 @@ const ItemListBlock = styled.div`
 const ItemList = ({data}) => {
     return (
         <ItemListBlock>
-            {data===[] && <div>검색결과가 없습니다.</div>}
+            {data.length === 0 && <div>검색결과가 없습니다.</div>}
             {data && data.map((item, index) => (
                 <Item key={index}
                       name={item.RELAX_RSTRNT_NM}

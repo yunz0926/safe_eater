@@ -11,7 +11,8 @@ const SelectBlock = styled.div`
     margin-top: 50px;
 `;
 
-const Search = () => {
+
+const SelectSearchResult = () => {
     return (
         <div>
             <TopBar />
@@ -23,4 +24,4 @@ const Search = () => {
     );
 };
 
-export default Search;
+export default SelectSearchResult;

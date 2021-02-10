@@ -35,11 +35,10 @@ const SubInfoBlock = styled.div`
 `;
 
 const Item = ({name, category, addr, telephone}) => {
-    const searchPlace = addr + " " + name;
     return (
         <ContentBlock>
             <MapBlock>
-                <Map searchPlace={searchPlace} />
+                <Map searchPlace={name} address={addr} />
             </MapBlock>
             <InfoBlock>
                 <NameBlock>
