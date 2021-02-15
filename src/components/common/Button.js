@@ -8,7 +8,8 @@ const ButtonBlock = styled.button`
     width: 70px;
     height: 45px;
     color: white;
-    background-color: #c7cfb7;
+    background-color: #49735D;
+    /*background-color: #c7cfb7;*/
     border: none;
     border-radius: 15px;
     font-size: 15px;

@@ -1,14 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import foodtable from './foodtable.jpg';
 
-const BannerBlock = styled.div`
+const BannerBlock = styled(Link)`
     background-color: #6BA688;
-    width: 100%;
+    width: 1310px;
     height: 430px;
     margin-top: 20px;
     margin-left: 5px;
     display: flex;
+    text-decoration: none;
 `;
 
 const ContentBlock = styled.div`
@@ -17,20 +19,19 @@ const ContentBlock = styled.div`
     font-size: 18px;
     margin-top: 100px;
     margin-left: 750px;
-    height: 430px;
     line-height: 30px;
-`
+`;
 
 const ImageBlock = styled.div`
     position: absolute;
     padding-left: 50px;
     padding-top: 50px;
     height: 430px;
-`
+`;
 
 const Banner = () => {
     return (
-        <BannerBlock>
+        <BannerBlock to="/introduction">
             <ImageBlock>
                 <img src={foodtable} alt="foodtable" width='650' height='430'/>
             </ImageBlock>

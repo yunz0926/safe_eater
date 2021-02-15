@@ -2,17 +2,6 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import ItemList from '../../components/search/ItemList';
 import Pagination from '../../components/search/Pagination';
-import styled from 'styled-components';
-
-const Notice = styled.div`
-    margin-left: 80px;
-    margin-bottom: 30px;
-    font-family: 'NanumBarunGothic';
-    font-size: 18px;
-    color: #686d76;
-    text-align: center;
-    line-height: 1.5rem;
-`;
 
 const ItemListPage = () => {
     const [currentPage, setCurrentPage] = useState(1);

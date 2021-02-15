@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 const ItemListBlock = styled.div`
     width: 100%;
+    margin-left: 150px;
     font-size: 17px;
     text-align: center;
     display: block;

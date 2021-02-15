@@ -14,8 +14,8 @@ const PageBlock = styled.ul`
 const PageLi = styled.li`
     display: inline-block;
     font-size:25px;
-    padding: 10px;
-    border-radius:10px;
+    padding: 15px;
+    border-radius: 25px;
     width:25px;
     &:hover{
         cursor:pointer;

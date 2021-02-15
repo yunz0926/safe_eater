@@ -5,7 +5,7 @@ import Map from './Map';
 const ContentBlock = styled.div`
     float: center;
     margin-left: 150px;
-    width: 800px;
+    width: 750px;
     padding: 3rem 6rem;
     border-bottom: 3px solid #c7cfb7;
 `;
@@ -16,7 +16,7 @@ const MapBlock = styled.div`
 
 const InfoBlock = styled.div`
     display: inline-block;
-    width: 450px;
+    width: 400px;
     vertical-align: top;
     padding-top: 5rem;
     margin-left: 50px;
@@ -47,7 +47,7 @@ const Item = ({name, category, addr, telephone}) => {
                 </NameBlock>
                 <SubInfoBlock>
                     주소: {addr} <br/>
-                    전화번호: {telephone}
+                    {telephone && <div>전화번호: {telephone}</div>}
                 </SubInfoBlock>
             </InfoBlock>
         </ContentBlock>

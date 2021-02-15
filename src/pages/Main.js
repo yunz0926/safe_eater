@@ -29,6 +29,7 @@ const Home = () => {
         <div>  
           <TopBar />
           <Banner />
+          <div style={{width: '1310px'}}>
           <Link to="/selectsearch">
             <MenuBlock>
               <div style={{padding: '100px 0'}}>
@@ -43,6 +44,7 @@ const Home = () => {
               </div>
             </MenuBlock>
           </Link>
+          </div>
         </div>
     );
 };
