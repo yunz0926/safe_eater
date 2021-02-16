@@ -20,7 +20,7 @@ const InfoBlock = styled.div`
     vertical-align: top;
     padding-top: 5rem;
     margin-left: 50px;
-    font-family: '고양일산';
+    font-family: 'Raleway';
     text-align: left;
 `;
 

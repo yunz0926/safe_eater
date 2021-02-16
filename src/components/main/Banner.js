@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import foodtable from './foodtable.jpg';
+import foodtable from '../../img/bannerimg.jpg';
 
-const BannerBlock = styled(Link)`
+const BannerBlock = styled.div`
     background-color: #6BA688;
     width: 1310px;
     height: 430px;
@@ -31,7 +30,7 @@ const ImageBlock = styled.div`
 
 const Banner = () => {
     return (
-        <BannerBlock to="/introduction">
+        <BannerBlock>
             <ImageBlock>
                 <img src={foodtable} alt="foodtable" width='650' height='430'/>
             </ImageBlock>

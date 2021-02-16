@@ -2,17 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import TopBar from '../components/common/TopBar';
 import Banner from '../components/main/Banner';
+import Navigation from '../components/common/Navigation';
+import Footer from '../components/common/Footer';
 import styled from 'styled-components';
 
 const MenuBlock = styled.div`
     display: inline-block;
     width: 250px;
     height: 250px;
-    margin-top: 150px;
+    margin-top: 80px;
     margin-left: 250px;
     margin-bottom: 100px;
     font-size: 20px;
-    font-family: '고양일산';
+    font-family: 'Raleway';
     color: black;
     text-align: center;
     border: 1px solid #cdd0cb;
@@ -24,20 +26,35 @@ const MenuBlock = styled.div`
     }
 `;
 
+const SearchShorcut = styled.div`
+    width: 110px;
+    margin-left: 200px;
+    margin-top: 150px;
+    border-bottom: 4px solid #49735D; 
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+`;
+
 const Home = () => {
     return (
         <div>  
           <TopBar />
+          <Navigation/>
           <Banner />
           <div style={{width: '1310px'}}>
-          <Link to="/selectsearch">
+          <SearchShorcut>
+            검색 바로가기
+          </SearchShorcut>
+          <Link to="/select">
             <MenuBlock>
               <div style={{padding: '100px 0'}}>
                 지역별, 카테고리별로<br/>검색하기
               </div>
             </MenuBlock>
           </Link>
-          <Link to="/nearbysearch">
+          <Link to="/nearby">
             <MenuBlock>
               <div style={{padding: '100px 0'}}>
                 주변에서 <br/> 검색하기
@@ -45,6 +62,7 @@ const Home = () => {
             </MenuBlock>
           </Link>
           </div>
+          <Footer/>
         </div>
     );
 };

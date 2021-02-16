@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import logo from './logo.png';
+import logo from '../../img/logo.png';
 import { Link } from 'react-router-dom';
 
 const TopBarBlock = styled.div`
+    width: 170px;
     margin-left: 30px;
     margin-top: 10px;
-    display: flex;
-`
+    display: inline-block;
+`;
 
 const TopBar = () => {
     return(

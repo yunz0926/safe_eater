@@ -1,26 +1,30 @@
 import React from 'react';
-import SelectContainer from '../containers/common/SelectContainer';
 import TopBar from '../components/common/TopBar';
 import Navigation from '../components/common/Navigation';
 import SubNavigation from '../components/common/SubNavigation';
 import Footer from '../components/common/Footer';
 import styled from 'styled-components';
 
-const SelectBlock = styled.div`
-    width: 1310px;
-    height: 70px;
-    margin: 70px 0px 600px 330px;
+const Content = styled.div`
+    width: 420px;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 150px 0px 600px 450px;
+    background-color: #c7cfb7;
+    font-family: 'Raleway';
+    font-size: 20px;
+    color: white;
 `;
 
 const Search = () => {
     return (
         <div>
-            <TopBar />
+            <TopBar/>
             <Navigation/>
             <SubNavigation/>
-            <SelectBlock>
-                <SelectContainer/>
-            </SelectBlock>
+            <Content>
+                코로나 안심식당을 찾기 위한 검색 방법을 선택하세요.
+            </Content>
             <Footer/>
         </div>
     );

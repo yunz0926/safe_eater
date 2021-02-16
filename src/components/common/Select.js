@@ -6,12 +6,11 @@ const StyledSelect = styled.select`
     height: 45px;
     margin-right: 5px;
     border: 3px solid #49735D;
-    /*border: 3px solid #c7cfb7;*/
     border-radius: 20px;
     text-align: center;
     font-size: 15px;
     color: #686d76;
-    font-family: '고양일산';
+    font-family: 'Raleway';
     text-align-last: center;
 
     option {

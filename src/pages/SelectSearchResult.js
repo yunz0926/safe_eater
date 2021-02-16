@@ -3,6 +3,8 @@ import SelectContainer from '../containers/common/SelectContainer';
 import TopBar from '../components/common/TopBar';
 import ItemListPage from '../containers/search/ItemListPage';
 import Navigation from '../components/common/Navigation';
+import SubNavigation from '../components/common/SubNavigation';
+import Footer from '../components/common/Footer';
 import styled from 'styled-components';
 
 const SelectBlock = styled.div`
@@ -18,10 +20,12 @@ const SelectSearchResult = () => {
         <div>
             <TopBar />
             <Navigation/>
+            <SubNavigation/>
             <SelectBlock>
                 <SelectContainer/>
             </SelectBlock>
             <ItemListPage />
+            <Footer/>
         </div>
     );
 };

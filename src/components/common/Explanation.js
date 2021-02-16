@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const TitleBlock = styled.div`
     width: 500px;
-    margin-left: 400px;
+    margin-left: 250px;
     margin-top: 50px;
     color: #49735D;
     font-family: 'NanumBarunGothic';
@@ -13,11 +13,13 @@ const TitleBlock = styled.div`
 
 const ContentBlock = styled.div`
     width: 800px;
-    height: 500px;
-    margin: 50px 0px 50px 350px;
+    height: 280px;
+    padding: 30px;
+    margin: 30px 0px 250px 200px;
     font-family: 'NanumBarunGothic';
     font-size: 18px;
     line-height: 2;
+    background-color: rgba(196, 196, 196, 0.1);
 `;
 
 const Explanation = () => {
