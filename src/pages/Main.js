@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import TopBar from '../components/common/TopBar';
 import Banner from '../components/main/Banner';
-import Navigation from '../components/common/Navigation';
 import Footer from '../components/common/Footer';
 import styled from 'styled-components';
 
@@ -41,7 +40,6 @@ const Home = () => {
     return (
         <div>  
           <TopBar />
-          <Navigation/>
           <Banner />
           <div style={{width: '1310px'}}>
           <SearchShorcut>

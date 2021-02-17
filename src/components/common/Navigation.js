@@ -4,10 +4,12 @@ import styled from 'styled-components';
 
 const NavBar = styled.div`  
     display: inline-block;
+    width: 420px;
     margin-left: 600px;
     padding-bottom: 10px;
 `;
 const Nav = styled(Link)`
+    width: 35px;
     display: inline-block;
     margin-left: 70px;
     font-family: 'Raleway';

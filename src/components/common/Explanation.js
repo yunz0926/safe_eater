@@ -1,5 +1,23 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const fadeIn = keyframes`
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+`;
+
+const ExplanationBlock = styled.div`
+    padding-top: 100px;
+
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-name: ${fadeIn};
+    animation-fill-mode: forwards;
+`;
 
 const TitleBlock = styled.div`
     width: 500px;
@@ -24,7 +42,7 @@ const ContentBlock = styled.div`
 
 const Explanation = () => {
     return (
-        <div>
+        <ExplanationBlock>
             <TitleBlock>
                 코로나 안심식당이란?
             </TitleBlock>
@@ -37,7 +55,7 @@ const Explanation = () => {
                 <div style={{fontWeight: 'bold', display: 'inline', color: '#49735D', fontSize: '22px'}}> safe eater </div>은 이 공공데이터를 바탕으로
                 코로나 안심식당을 지역별, 카테고리별로 검색할 수 있는 기능과 위치 권한을 통해 주변에서 검색할 수 있는 기능을 제공합니다.
             </ContentBlock>
-        </div>
+        </ExplanationBlock>
     );
 };
 

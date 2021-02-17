@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import NearbyMap from '../components/search/NearbyMap';
 import TopBar from '../components/common/TopBar';
-import Navigation from '../components/common/Navigation';
 import SubNavigation from '../components/common/SubNavigation';
 import Footer from '../components/common/Footer';
 
@@ -14,20 +13,21 @@ const TextBlock = styled.div`
     width: 580px;
     padding: 10px 10px;
     margin-left: 400px;
-    margin-top: 80px;
+    margin-top: 180px;
     color: #3d3d3d;
     font-weight: 300;
 `;
 const MapBlock = styled.div`
-  width: 800px;
-  padding: 50px 0px 100px 400px;
+    position: relative;
+    z-index: 0;
+    width: 800px;
+    padding: 50px 0px 100px 400px;
 `;
 
 const NearbySearch = () => {
     return (
         <div>
           <TopBar/>
-          <Navigation/>
           <SubNavigation/>
           <TextBlock>
               사용자 위치를 기준으로 근처 안심식당을 보여줍니다. <br/>

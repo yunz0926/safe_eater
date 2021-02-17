@@ -1,12 +1,21 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import foodtable from '../../img/bannerimg.jpg';
+
+const fadeIn = keyframes`
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+`;
 
 const BannerBlock = styled.div`
     background-color: #6BA688;
     width: 1310px;
     height: 430px;
-    margin-top: 20px;
+    margin-top: 150px;
     margin-left: 5px;
     display: flex;
     text-decoration: none;
@@ -19,6 +28,12 @@ const ContentBlock = styled.div`
     margin-top: 100px;
     margin-left: 750px;
     line-height: 30px;
+    white-space: nowrap;
+
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-name: ${fadeIn};
+    animation-fill-mode: forwards;
 `;
 
 const ImageBlock = styled.div`
@@ -26,6 +41,11 @@ const ImageBlock = styled.div`
     padding-left: 50px;
     padding-top: 50px;
     height: 430px;
+    
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-name: ${fadeIn};
+    animation-fill-mode: forwards;
 `;
 
 const Banner = () => {

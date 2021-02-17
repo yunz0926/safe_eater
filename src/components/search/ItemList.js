@@ -3,12 +3,14 @@ import Item from './Item';
 import styled from 'styled-components';
 
 const ItemListBlock = styled.div`
+    position: relative;
+    z-index: 0;
     width: 100%;
     margin-left: 150px;
     font-size: 17px;
     text-align: center;
     display: block;
-`
+`;
 
 const ItemList = ({data}) => {
     return (
