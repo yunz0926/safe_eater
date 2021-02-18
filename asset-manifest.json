@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/safe_eater/static/css/main.ceaa536b.chunk.css",
+    "main.js": "/safe_eater/static/js/main.b69b229f.chunk.js",
+    "main.js.map": "/safe_eater/static/js/main.b69b229f.chunk.js.map",
+    "runtime-main.js": "/safe_eater/static/js/runtime-main.4ec2adcc.js",
+    "runtime-main.js.map": "/safe_eater/static/js/runtime-main.4ec2adcc.js.map",
+    "static/js/2.241db87b.chunk.js": "/safe_eater/static/js/2.241db87b.chunk.js",
+    "static/js/2.241db87b.chunk.js.map": "/safe_eater/static/js/2.241db87b.chunk.js.map",
+    "index.html": "/safe_eater/index.html",
+    "static/css/main.ceaa536b.chunk.css.map": "/safe_eater/static/css/main.ceaa536b.chunk.css.map",
+    "static/js/2.241db87b.chunk.js.LICENSE.txt": "/safe_eater/static/js/2.241db87b.chunk.js.LICENSE.txt",
+    "static/media/NanumBarunGothic.06c82153.ttf": "/safe_eater/static/media/NanumBarunGothic.06c82153.ttf",
+    "static/media/Raleway.a9338128.ttf": "/safe_eater/static/media/Raleway.a9338128.ttf",
+    "static/media/bannerimg.623391e5.jpg": "/safe_eater/static/media/bannerimg.623391e5.jpg",
+    "static/media/고양일산.1a32d185.ttf": "/safe_eater/static/media/고양일산.1a32d185.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4ec2adcc.js",
+    "static/js/2.241db87b.chunk.js",
+    "static/css/main.ceaa536b.chunk.css",
+    "static/js/main.b69b229f.chunk.js"
+  ]
+}
