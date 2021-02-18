@@ -13,7 +13,7 @@ const fadeIn = keyframes`
 
 const BannerBlock = styled.div`
     background-color: #6BA688;
-    width: 1310px;
+    width: 100%;
     height: 430px;
     margin-top: 150px;
     margin-left: 5px;

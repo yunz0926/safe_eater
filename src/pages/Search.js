@@ -17,7 +17,7 @@ const blink = keyframes`
 `;
 
 const Content = styled.div`
-    width: 420px;
+    width: 500px;
     padding: 10px;
     border-radius: 20px;
     margin: 200px 0px 600px 450px;
@@ -25,6 +25,7 @@ const Content = styled.div`
     font-family: 'Raleway';
     font-size: 20px;
     color: white;
+    text-align: center;
 
     animation-delay: 1s;
     animation-duration: 4s;

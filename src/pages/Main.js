@@ -26,7 +26,7 @@ const MenuBlock = styled.div`
 `;
 
 const SearchShorcut = styled.div`
-    width: 110px;
+    width: 130px;
     margin-left: 200px;
     margin-top: 150px;
     border-bottom: 4px solid #49735D; 

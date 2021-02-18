@@ -9,9 +9,9 @@ const NavBar = styled.div`
     padding-bottom: 10px;
 `;
 const Nav = styled(Link)`
-    width: 35px;
+    width: 40px;
     display: inline-block;
-    margin-left: 70px;
+    margin-left: 50px;
     font-family: 'Raleway';
     font-size: 20px;
     font-weight: 600;

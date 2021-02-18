@@ -22,12 +22,13 @@ const blinkCaret = keyframes`
 `;
 
 const ContactInfo = styled.div`
-    width: 800px;
+    width: 900px;
     padding: 50px 30px;
     margin: 250px 0px 400px 250px;
     background-color: rgba(196, 196, 196, 0.1);
     font-family: 'Raleway';
     font-size: 18px;
+    text-align: center;
 `;
 
 const TextBlock = styled.div`
