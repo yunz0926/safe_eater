@@ -16,7 +16,7 @@ const App = () => {
   return (
     <ScrollToTop>
       <GlobalFonts />
-      <Route component={Main} path="/" exact />
+      <Route component={Main} path="/safe_eater" exact />
       <Route component={Introduction} path="/introduction"/>
       <Route component={Search} path="/search"/>
       <Route component={Contact} path="/contact"/>
