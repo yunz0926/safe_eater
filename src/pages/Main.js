@@ -45,14 +45,14 @@ const Home = () => {
           <SearchShorcut>
             검색 바로가기
           </SearchShorcut>
-          <Link to="/select">
+          <Link to="/safe_eater/select">
             <MenuBlock>
               <div style={{padding: '100px 0'}}>
                 지역별, 카테고리별로<br/>검색하기
               </div>
             </MenuBlock>
           </Link>
-          <Link to="/nearby">
+          <Link to="/safe_eater/nearby">
             <MenuBlock>
               <div style={{padding: '100px 0'}}>
                 주변에서 <br/> 검색하기

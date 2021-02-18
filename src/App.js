@@ -17,12 +17,12 @@ const App = () => {
     <ScrollToTop>
       <GlobalFonts />
       <Route component={Main} path="/safe_eater" exact />
-      <Route component={Introduction} path="/introduction"/>
-      <Route component={Search} path="/search"/>
-      <Route component={Contact} path="/contact"/>
-      <Route component={SelectSearch} path="/select"/>
-      <Route component={NearbySearch} path="/nearby"/>
-      <Route component={SelectSearchResult} path="/searchresult"/>
+      <Route component={Introduction} path="/safe_eater/introduction"/>
+      <Route component={Search} path="/safe_eater/search"/>
+      <Route component={Contact} path="/safe_eater/contact"/>
+      <Route component={SelectSearch} path="/safe_eater/select"/>
+      <Route component={NearbySearch} path="/safe_eater/nearby"/>
+      <Route component={SelectSearchResult} path="/safe_eater/searchresult"/>
     </ScrollToTop>
   )
 }

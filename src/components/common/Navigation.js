@@ -27,16 +27,16 @@ const Nav = styled(Link)`
 const Navigation = () => {
     return (
         <NavBar>
-            <Nav to="/">
+            <Nav to="/safe_eater">
                 메인
             </Nav>
-            <Nav to="/introduction">
+            <Nav to="/safe_eater/introduction">
                 소개
             </Nav>
-            <Nav to="/search">
+            <Nav to="/safe_eater/search">
                 검색
             </Nav>
-            <Nav to="/contact">
+            <Nav to="/safe_eater/contact">
                 의견
             </Nav>
         </NavBar>

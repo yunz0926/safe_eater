@@ -24,7 +24,7 @@ const Logo = styled.div`
 const TopBar = () => {
     return(
         <TopBarBlock>
-            <Link to = "/">
+            <Link to = "/safe_eater">
                 <Logo>
                 <img src={logo} width='165' height='75' alt="logo"/>
                 </Logo>

@@ -30,10 +30,10 @@ const SubNavigation = ({menu}) => {
 
     return (
         <SubNavigationBlock>
-            <Menu to="/select">
+            <Menu to="/safe_eater/select">
                 지역별, 카테고리별로 검색하기
             </Menu>
-            <Menu to="/nearby">
+            <Menu to="/safe_eater/nearby">
                 주변에서 검색하기
             </Menu>
         </SubNavigationBlock>

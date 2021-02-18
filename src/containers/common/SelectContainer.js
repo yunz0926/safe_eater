@@ -45,7 +45,7 @@ const SelectContainer = () => {
             <Select list={SiList} name="시도명" Change={onChangeSI}/>
             <Select list={SiDoList} name="시군구명" Change={onChangeSIDO}/>
             <Select list={CategoryList} name="카테고리" Change={onChangeCategory}/>                
-            <Link to="/searchresult"><Button/></Link>
+            <Link to="/safe_eater/searchresult"><Button/></Link>
         </form>
     );
 };
